@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>
+    LC analytics platform
+</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mode-switcher">
+  <button id="singleMode" class="active-mode">My Analytics</button>
+  <button id="compareMode">Compare</button>
+</div>
+<div id="singleDashboard">
+    <div class="container">
+    <h1>Leetcode Analytics Dashboard</h1>
+    <div class="search-container">
+    <input id="username" placeholder="enter unsername ">
+    <button id="searchbutton">search</button></div>
+    
+    <div class="cards">
+        <div class="easy card">
+            <h3>Easy</h3>
+            <p id="easycount">0</p>
+        </div>
+        <div class="medium card">
+            <h3>Medium</h3>
+            <p id="mediumcount">0</p>
+        </div>
+        <div class="hard card">
+            <h3>Hard</h3>
+            <p id="hardcount">0</p>
+        </div>
+    </div>
+<div class="bottom-section">
+  <div class="chart-container">
+<canvas id="chart" height="200" width="200"></canvas>
+</div>
+<img id="avatar" src="" width="60" height="60" style="border-radius: 50%; display:none;">
+<div class="stats-panel">
+    <h3>Stats Overview</h3>
+    <p>Total solved: <span id="totalSolved">0</span></p>
+    <p>Real Name <span id="name">-</span></p>
+    <p>Ranking : <span id="ranking">-</span></p>
+    </div>
+</div></div></div></div>
+<div id="compareSection" style="display:none">
+  <div class="container">
+    <h2>Head to Head</h2>
+    <div class="compare-search">
+      <input id="username1" placeholder="Enter username 1">
+      <input id="username2" placeholder="Enter username 2">
+      <button id="compareButton">Compare</button>
+    </div>
+    <div class="compare-grid" id="compareGrid" style="display:none">
+      <div class="compare-card">
+        <img id="avatar1" width="60" height="60" style="border-radius:50%;">
+        <h3 id="name1">-</h3>
+        <p>Easy: <span id="easy1">0</span></p>
+        <p>Medium: <span id="medium1">0</span></p>
+        <p>Hard: <span id="hard1">0</span></p>
+        <p>Total: <span id="total1">0</span></p>
+        <p>Rank: <span id="rank1">-</span></p>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="compare-card">
+        <img id="avatar2" width="60" height="60" style="border-radius:50%;">
+        <h3 id="name2">-</h3>
+        <p>Easy: <span id="easy2">0</span></p>
+        <p>Medium: <span id="medium2">0</span></p>
+        <p>Hard: <span id="hard2">0</span></p>
+        <p>Total: <span id="total2">0</span></p>
+        <p>Rank: <span id="rank2">-</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
