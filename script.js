@@ -94,8 +94,29 @@ const [d1, d2] = await Promise.all([r1.json(), r2.json()]);  // to convert to ac
     document.getElementById("rank1").textContent = p1.ranking;
     document.getElementById("rank2").textContent = p2.ranking;
 
+const total1 = d1.easySolved + d1.mediumSolved + d1.hardSolved;
+const total2 = d2.easySolved + d2.mediumSolved + d2.hardSolved;
     document.getElementById("compareGrid").style.display = "flex";
+    const card1 = document.getElementById("card1");
+const card2 = document.getElementById("card2");
+  card1.classList.remove("winner");
+card2.classList.remove("winner");
+document.getElementById("name1").textContent = p1.name;
+document.getElementById("name2").textContent = p2.name;
 
+if (total1 > total2) {
+  card1.classList.add("winner");
+  document.getElementById("name1").textContent = "* " + p1.name;
+} else if (total2 > total1) {
+  card2.classList.add("winner");
+  document.getElementById("name2").textContent = "* " + p2.name;
+
+}
+
+
+
+
+  
   } catch(error) {
     alert("Something went wrong. Try again.");
   }
